@@ -50,7 +50,7 @@ $( document ).ready( function(){
       success: function(response){
         console.log('Received from POST: ', response);
         for (var i = 0; i < response.length; i++) {
-          $('#outputDiv').html('<p><strong> Joke Author: </strong>' + response[i].whoseJoke + ''
+          $('#outputDiv').append('<p><strong> Joke Author: </strong>' + response[i].whoseJoke + ''
            + '<strong> Question: </strong>' + response[i].jokeQuestion + '' + '<strong> Punch Line: </strong>' +
            response[i].punchLine + '</p>');
         }
